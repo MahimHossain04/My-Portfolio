@@ -1311,6 +1311,60 @@ button:active,
     font-size: 14px;
   }
 }
+/* ================= CONTACT TITLE STYLE ================= */
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #8b5cf6;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+/* ===== FORCE SAME SIZE FOR "Let’s connect" ===== */
+.contact-title,
+.contact-title span {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+
+.contact-title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.contact-title span {
+  background: linear-gradient(
+    to right,
+    #a855f7,
+    #38bdf8
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
 
 
   </style>
@@ -1862,7 +1916,7 @@ button:active,
         <div class="project-tags">
           <span>Java</span>
           <span>OOP</span>
-          
+          <span>MySQL</span>
         </div>
 
         <div class="project-actions">
@@ -1904,12 +1958,21 @@ button:active,
 <section id="contact" class="contact-section">
 
   <div class="contact-header">
-    <span>CONTACT</span>
-    <h2>Let’s <span>connect</span></h2>
-    <p>
-      Open to opportunities, collaborations, or just a friendly chat about technology.
-    </p>
+
+  <div class="contact-label">
+    💬 CONTACT
   </div>
+
+  <h2 class="contact-title">
+    Let’s <span>connect</span>
+  </h2>
+
+  <p>
+    Open to opportunities, collaborations, or just a friendly chat about technology.
+  </p>
+
+</div>
+
 
   <div class="contact-grid">
 
@@ -2042,4 +2105,3 @@ button:active,
 
 </body>
 </html>
-
