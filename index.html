@@ -21,12 +21,56 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      background: radial-gradient(circle at bottom left, #0ea5e9, #0f172a 40%, #020617);
-      color: #e5e7eb;
-      padding-top: 80px;
+      
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;              /* 🔥 must */
+  flex-direction: column;     /* 🔥 must */
+  background: radial-gradient(circle at bottom left, #0ea5e9, #0f172a 40%, #020617);
+  color: #e5e7eb;
+  padding-top: 80px;
+
+
     }
+
+    /* ================= BUTTON & LINK ANIMATION SYSTEM ================= */
+
+/* All clickable elements */
+a,
+button,
+.btn-primary,
+.btn-secondary,
+.cta,
+.send-btn {
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+a:hover,
+button:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.cta:hover,
+.send-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Click / Press effect */
+a:active,
+button:active,
+.btn-primary:active,
+.btn-secondary:active,
+.cta:active,
+.send-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
 
     /* ===== HEADER ===== */
     header {
@@ -891,18 +935,19 @@
 }
 
 /* ===== CONTACT – COMPACT & MODERN ===== */
+/* 🔥 EXTRA COMPACT CONTACT INFO BOXES */
 
 .contact-info .info-card {
-  min-height: unset !important;     
-  height: 48px !important;         
-  padding: 4px 14px !important;    
+  min-height: unset !important;     /* 🔴 আগের min-height বাতিল */
+  height: 48px !important;          /* 🔥 direct height control */
+  padding: 4px 14px !important;     /* vertical padding আরও কম */
   gap: 10px;
   border-radius: 12px;
   display: flex;
   align-items: center;
 }
 
-
+/* icon আরও ছোট */
 .contact-info .info-icon {
   width: 28px !important;
   height: 28px !important;
@@ -998,9 +1043,9 @@
 .info-card {
   display: flex;
   align-items: center;
-  gap: 12px;                
-  padding: 10px 16px;       
-  border-radius: 14px;     
+  gap: 12px;                /* gap কম */
+  padding: 10px 16px;       /* 🔴 height কমানো */
+  border-radius: 14px;      /* একটু compact */
   background: linear-gradient(
     145deg,
     rgba(30,41,59,0.4),
@@ -1096,8 +1141,8 @@
   width: 100%;
   margin-top: 6px;
   margin-bottom: 18px;
-  padding: 10px 14px;      
-  border-radius: 12px;     
+  padding: 10px 14px;        /* 🔥 height কমানো */
+  border-radius: 12px;      /* more compact */
   background: rgba(2,6,23,0.85);
   border: 1px solid rgba(148,163,184,0.14);
   color: #e5e7eb;
@@ -1106,7 +1151,7 @@
 
 
 .contact-form textarea {
-  min-height: 90px;  
+  min-height: 90px;   /* আগের 120px থেকে কম */
   resize: none;
 }
 
@@ -1131,6 +1176,142 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== FOOTER ===== */
+/* ===== COMPACT FOOTER ===== */
+.site-footer {
+  margin-top: auto;
+  padding: 28px 20px; /* 🔥 HEIGHT CONTROL */
+  background: linear-gradient(
+    to bottom,
+    rgba(2,6,23,0.6),
+    rgba(2,6,23,1)
+  );
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Navigation */
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  font-size: 14px;
+}
+
+/* Social icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 12px;
+  margin: 0; 
+}
+
+/* ===== MINIMAL FOOTER ===== */
+.site-footer {
+  margin-top: auto;                 
+  padding: 14px 10px;               
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(2,6,23,0.7),
+    rgba(2,6,23,1)
+  );
+  border-top: 1px solid rgba(148,163,184,0.12);
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ================= MOBILE HEADER FIX ================= */
+@media (max-width: 768px) {
+
+  header {
+    height: 64px;
+  }
+
+  body {
+    padding-top: 64px; /* header height match */
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cta {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+/* ================= HERO & BUTTON MOBILE ================= */
+
+/* Mobile Hero */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 80px 16px;
+    gap: 30px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Mobile Buttons */
+  .btn-primary,
+  .btn-secondary,
+  .cta,
+  .send-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
+
 
   </style>
 </head>
@@ -1157,13 +1338,14 @@
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <a href="#contact" class="cta">Let’s Talk</a>
     </div>
   </header>
 
+  
   <!-- HERO -->
   <section id="home" class="hero">
 
@@ -1182,7 +1364,10 @@
       </p>
       <div class="buttons">
         <a href="#projects" class="btn-primary">View Projects →</a>
-        <a href="#" class="btn-secondary">Download Resume</a>
+        <a href="resume.pdf" download class="btn-secondary">
+  Download Resume
+</a>
+
       </div>
     </div>
   </section>
@@ -1848,6 +2033,12 @@
   </div>
 </section>
 
+<!-- ===== FOOTER ===== -->
+
+<footer class="site-footer">
+  <p>© 2026 Mahim Hossain. All rights reserved.</p>
+</footer>
+
+
 </body>
 </html>
-
