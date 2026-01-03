@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mahim Hossain | Portfolio</title>
+   <link rel="icon" type="image/png" href="icon1.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(circle at bottom left, #0ea5e9, #0f172a 40%, #020617);
+      color: #e5e7eb;
+      padding-top: 80px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 72px;
+      background: linear-gradient(
+        to right,
+        rgba(88, 28, 135, 0.35),
+        rgba(15, 23, 42, 0.85)
+      );
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+      z-index: 1000;
+    }
+
+    .nav {
+      max-width: 1200px;
+      height: 100%;
+      margin: auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #a855f7;
+    }
+
+    .logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid #a855f7;
+      object-fit: cover;
+    }
+
+    .logo span {
+      color: #22d3ee;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #cbd5f5;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links a:hover {
+      color: #a855f7;
+    }
+
+    .cta {
+      padding: 10px 22px;
+      background: linear-gradient(to right, #6366f1, #a855f7);
+      color: #fff;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 120px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-img {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      border: 6px solid rgba(168,85,247,0.6);
+      object-fit: cover;
+      box-shadow: 0 0 80px rgba(14,165,233,0.35);
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(56,189,248,0.15);
+      color: #38bdf8;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 64px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h1 span {
+      color: #a855f7;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 400;
+      color: #94a3b8;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cbd5f5;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 14px 28px;
+      background: linear-gradient(to right, #6366f1, #a855f7);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    .btn-secondary {
+      padding: 14px 28px;
+      border: 1px solid #475569;
+      color: #e5e7eb;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      padding: 120px 20px;
+      background: #020617;
+    }
+
+    .about-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+    }
+
+    .about-label {
+      color: #a855f7;
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .about-title {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .about-title span {
+      color: #a855f7;
+    }
+
+    .about-text {
+      color: #94a3b8;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .about-text strong {
+      color: #e5e7eb;
+    }
+
+    .about-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(
+        145deg,
+        rgba(30,41,59,0.4),
+        rgba(2,6,23,0.9)
+      );
+      border-radius: 20px;
+      padding: 28px;
+      border: 1px solid rgba(148,163,184,0.1);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(168,85,247,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: #a855f7;
+      font-weight: bold;
+    }
+
+    .card p {
+      color: #94a3b8;
+      font-size: 15px;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .stat h3 {
+      color: #a855f7;
+      font-size: 28px;
+    }
+
+    .stat span {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* ===== SKILLS SECTION ===== */
+.skills-section {
+  padding: 140px 20px;
+  background: radial-gradient(circle at top, #020617, #020617);
+}
+
+.skills-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.skills-tag {
+  color: #8b5cf6;
+  letter-spacing: 3px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.skills-header h2 {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.skills-header h2 span {
+  color: #a855f7;
+}
+
+.skills-header p {
+  max-width: 680px;
+  margin: auto;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skills-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.35),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 26px;
+  padding: 36px;
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+.card-title {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(168,85,247,0.2);
+  color: #a855f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.card-title h3 {
+  margin-bottom: 4px;
+}
+
+.card-title span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.progress {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: linear-gradient(to right, #8b5cf6, #a855f7);
+  border-radius: 999px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header h2 {
+    font-size: 40px;
+  }
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-section {
+  padding: 140px 20px;
+  background: #020617;
+}
+
+.experience-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.experience-tag {
+  color: #8b5cf6;
+  letter-spacing: 3px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.experience-header h2 {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.experience-header h2 span {
+  color: #a855f7;
+}
+
+.experience-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #94a3b8;
+}
+
+/* Card */
+.experience-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.35),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 28px;
+  padding: 40px;
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+/* Top */
+.exp-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.exp-left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.exp-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: rgba(168,85,247,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-logo img {
+  width: 36px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+
+.exp-org {
+  color: #8b5cf6;
+  font-size: 14px;
+}
+
+.exp-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(168,85,247,0.15);
+  color: #a855f7;
+  font-size: 13px;
+}
+
+/* Meta */
+.exp-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+/* Description */
+.exp-desc {
+  color: #cbd5f5;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Skill chips */
+.exp-skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.exp-skills span {
+  background: rgba(15,23,42,0.6);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .exp-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .exp-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-header h2 {
+    font-size: 40px;
+  }
+}
+/* ===== EDUCATION ===== */
+.education-section {
+  padding: 140px 20px;
+  background: #020617;
+}
+
+.education-wrapper {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Header */
+.education-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.education-tag {
+  color: #8b5cf6;
+  letter-spacing: 3px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.education-header h2 {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.education-header h2 span {
+  color: #a855f7;
+}
+
+.education-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #94a3b8;
+}
+
+/* Highlight */
+.edu-highlight {
+  max-width: 520px;
+  margin: 0 auto 60px;
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.4),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 22px;
+  padding: 22px 26px;
+  border: 1px solid rgba(148,163,184,0.15);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 0 40px rgba(168,85,247,0.25);
+}
+
+.edu-highlight-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(168,85,247,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-highlight h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.edu-highlight h4 span {
+  color: #a855f7;
+}
+
+.edu-highlight p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Education Cards */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.education-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.35),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 26px;
+  padding: 30px 34px;
+  border: 1px solid rgba(148,163,184,0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edu-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.edu-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.edu-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.edu-logo.mc {
+  background: rgba(148,163,184,0.25);
+}
+
+.edu-logo.school {
+  background: rgba(100,116,139,0.35);
+}
+
+.education-card h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.education-card span {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.edu-meta {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* Badge */
+.edu-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(148,163,184,0.15);
+  color: #cbd5f5;
+  font-size: 13px;
+}
+
+.edu-badge.current {
+  background: rgba(168,85,247,0.2);
+  color: #a855f7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .education-header h2 {
+    font-size: 40px;
+  }
+
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+/* ===== PROJECTS ===== */
+.projects-section {
+  padding: 140px 20px;
+  background: #020617;
+}
+
+.projects-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.projects-tag {
+  color: #8b5cf6;
+  letter-spacing: 3px;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.projects-header h2 {
+  font-size: 52px;
+  margin-bottom: 18px;
+}
+
+.projects-header h2 span {
+  color: #a855f7;
+}
+
+.projects-header p {
+  max-width: 700px;
+  margin: auto;
+  color: #94a3b8;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.project-card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.35),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 26px;
+  padding: 32px;
+  border: 1px solid rgba(148,163,184,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 13px;
+}
+
+.project-status.live { color: #22d3ee; }
+.project-status.upcoming { color: #a855f7; }
+.project-status.planned { color: #94a3b8; }
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(168,85,247,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.project-card h3 {
+  font-size: 18px;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.project-tags span {
+  background: rgba(148,163,184,0.15);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* Actions */
+.project-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-primary {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-secondary {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(148,163,184,0.3);
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-disabled {
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(148,163,184,0.15);
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-header h2 {
+    font-size: 40px;
+  }
+}
+
+/* ===== CONTACT – COMPACT & MODERN ===== */
+/* 🔥 EXTRA COMPACT CONTACT INFO BOXES */
+
+.contact-info .info-card {
+  min-height: unset !important;     /* 🔴 আগের min-height বাতিল */
+  height: 48px !important;          /* 🔥 direct height control */
+  padding: 4px 14px !important;     /* vertical padding আরও কম */
+  gap: 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* icon আরও ছোট */
+.contact-info .info-icon {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 10px;
+}
+
+/* label text (Email / Phone / Location) */
+.contact-info .info-card span {
+  font-size: 10px;
+  line-height: 1;
+}
+
+/* value text */
+.contact-info .info-card p {
+  font-size: 13px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+
+/* ===== SOCIAL ICONS ===== */
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(148,163,184,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.social-icons a svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  transform: translateY(-2px);
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  padding: 120px 20px;
+  background: radial-gradient(circle at bottom left, #0ea5e9, #0f172a 45%, #020617);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.contact-header span {
+  color: #a855f7;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.contact-header h2 {
+  font-size: 52px;
+  margin: 12px 0;
+}
+
+.contact-header h2 span {
+  color: #a855f7;
+}
+
+.contact-header p {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+}
+
+/* LEFT INFO */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;                /* gap কম */
+  padding: 10px 16px;       /* 🔴 height কমানো */
+  border-radius: 14px;      /* একটু compact */
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.4),
+    rgba(2,6,23,0.9)
+  );
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+
+.info-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+
+.info-icon svg {
+  width: 18px;
+  height: 18px;
+  color: white;
+}
+
+.info-card span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.info-card p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* SOCIALS */
+
+.socials {
+  margin-top: 12px;
+}
+
+.socials span {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(148,163,184,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cbd5f5;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* RIGHT FORM */
+
+.contact-form {
+  background: linear-gradient(
+    145deg,
+    rgba(30,41,59,0.35),
+    rgba(2,6,23,0.95)
+  );
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid rgba(148,163,184,0.12);
+}
+
+.contact-form label {
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  padding: 10px 14px;        /* 🔥 height কমানো */
+  border-radius: 12px;      /* more compact */
+  background: rgba(2,6,23,0.85);
+  border: 1px solid rgba(148,163,184,0.14);
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+
+.contact-form textarea {
+  min-height: 90px;   /* আগের 120px থেকে কম */
+  resize: none;
+}
+
+
+.contact-form button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<script>
+  // Always go to Home (top) on page reload
+  if (performance.navigation.type === 1) {
+    window.location.hash = "#home";
+  }
+</script>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <a href="#" class="logo">
+        <img src="https://i.postimg.cc/X7sJL3TT/Profile.jpg" class="logo-img" alt="Mahim" />
+        MH<span>✦</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <a href="#contact" class="cta">Let’s Talk</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+
+    <div class="profile-wrapper">
+      <img src="https://i.postimg.cc/X7sJL3TT/Profile.jpg" class="profile-img" alt="Mahim">
+    </div>
+
+    <div class="content">
+      <div class="badge">🚀 Open to Opportunities</div>
+      <h1>Hi, I’m <span>Mahim</span></h1>
+      <h2>Computer Science & Engineering Student</h2>
+      <p>
+        Aspiring Software Engineer passionate about building
+        <span style="color:#a855f7;">impactful solutions</span>
+        through clean code and innovative thinking.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn-primary">View Projects →</a>
+        <a href="#" class="btn-secondary">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-container">
+
+      <div>
+        <span class="about-label">⚡ ABOUT ME</span>
+        <h2 class="about-title">
+          Passionate about <br>
+          <span>crafting solutions</span>
+        </h2>
+
+        <p class="about-text">
+          I'm a Computer Science & Engineering student at American International
+          University-Bangladesh, driven by a deep passion for software development
+          and technology innovation.
+        </p>
+
+        <p class="about-text">
+          My journey in tech is fueled by curiosity and a relentless desire to
+          create impactful solutions.
+        </p>
+
+        <p class="about-text">
+          <strong>
+            Currently seeking opportunities to apply my skills and learn from industry experts.
+          </strong>
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <h3>3rd</h3>
+            <span>Year at AIUB</span>
+          </div>
+          <div class="stat">
+            <h3>Cisco</h3>
+            <span>Certifications</span>
+          </div>
+          <div class="stat">
+            <h3>CS&E</h3>
+            <span>Focus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="card">
+          <div class="card-icon">&lt;/&gt;</div>
+          <h4>Clean Coder</h4>
+          <p>Writing efficient, maintainable code.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧠</div>
+          <h4>Problem Solver</h4>
+          <p>Tackling complex challenges.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h4>Goal Driven</h4>
+          <p>Focused on growth and learning.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <h4>Fast Learner</h4>
+          <p>Adapting quickly to new tech.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+<section id="skills" class="skills-section">
+  <div class="skills-wrapper">
+
+    <div class="skills-header">
+      <span class="skills-tag">SKILLS</span>
+      <h2>Technical <span>expertise</span></h2>
+      <p>
+        A combination of technical skills, IT fundamentals, and programming knowledge.
+      </p>
+    </div>
+
+    <div class="skills-cards">
+
+      <!-- ================= TECHNICAL SKILLS ================= -->
+      <div class="skills-card">
+        <div class="card-title">
+          <div class="icon-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L21 7V17L12 22L3 17V7L12 2Z"
+                stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Technical Skills</h3>
+            <span>Office & database tools</span>
+          </div>
+        </div>
+
+        <!-- Microsoft Word -->
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="3" width="16" height="18" rx="2"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M8 8H16M8 12H16M8 16H13"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Microsoft Word
+            </span>
+            <span>50%</span>
+          </label>
+          <div class="progress"><div style="width:50%"></div></div>
+        </div>
+
+        <!-- Microsoft PowerPoint -->
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="4" width="18" height="14" rx="2"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M8 14V10H11C12.5 10 12.5 14 11 14H8Z"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Microsoft PowerPoint
+            </span>
+            <span>55%</span>
+          </label>
+          <div class="progress"><div style="width:55%"></div></div>
+        </div>
+
+        <!-- Microsoft Excel -->
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="3" width="16" height="18" rx="2"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M9 8L15 16M15 8L9 16"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Microsoft Excel
+            </span>
+            <span>35%</span>
+          </label>
+          <div class="progress"><div style="width:35%"></div></div>
+        </div>
+
+        <!-- Oracle Database -->
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <ellipse cx="12" cy="5" rx="7" ry="3"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M5 5V12C5 14 19 14 19 12V5"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M5 12V19C5 21 19 21 19 19V12"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Oracle Database
+            </span>
+            <span>40%</span>
+          </label>
+          <div class="progress"><div style="width:40%"></div></div>
+        </div>
+      </div>
+
+      <!-- ================= IT & NETWORKING ================= -->
+      <div class="skills-card">
+        <div class="card-title">
+          <div class="icon-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="6" r="2.5"
+                stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="6" cy="18" r="2.5"
+                stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="18" cy="18" r="2.5"
+                stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 8.5V13M12 13L6 15.5M12 13L18 15.5"
+                stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <div>
+            <h3>IT & Networking</h3>
+            <span>System & security fundamentals</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="4" width="18" height="12" rx="2"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M8 20H16" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Computer Hardware & Software
+            </span>
+            <span>50%</span>
+          </label>
+          <div class="progress"><div style="width:50%"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M3 4H21V16H3V4Z"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 7V13" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              OS Installation & Troubleshooting
+            </span>
+            <span>75%</span>
+          </label>
+          <div class="progress"><div style="width:75%"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="5" r="2.5"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="5" cy="18" r="2.5"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="19" cy="18" r="2.5"
+                  stroke="currentColor" stroke-width="1.6"/>
+                <path d="M12 7.5V13M12 13L5 15.5M12 13L19 15.5"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              Networking Fundamentals
+            </span>
+            <span>70%</span>
+          </label>
+          <div class="progress"><div style="width:70%"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L20 6V12C20 16 16 19 12 21C8 19 4 16 4 12V6L12 3Z"
+                  stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+              IT Security Basics
+            </span>
+            <span>65%</span>
+          </label>
+          <div class="progress"><div style="width:65%"></div></div>
+        </div>
+
+        <div class="skill">
+          <label>
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M4 12H8L10 6L14 18L16 12H20"
+                  stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              System Diagnostics
+            </span>
+            <span>75%</span>
+          </label>
+          <div class="progress"><div style="width:75%"></div></div>
+        </div>
+      </div>
+
+      <!-- ================= PROGRAMMING LANGUAGES ================= -->
+      <div class="skills-card">
+        <div class="card-title">
+          <div class="icon-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M8 17L3 12L8 7M16 7L21 12L16 17"
+                stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Programming Languages</h3>
+            <span>Core development skills</span>
+          </div>
+        </div>
+
+        <div class="skill"><label><span>💠 C++</span></label></div>
+        <div class="skill"><label><span>🌐 HTML</span></label></div>
+        <div class="skill"><label><span>🎨 CSS</span></label></div>
+        <div class="skill"><label><span>☕ Java</span></label></div>
+        <div class="skill"><label><span>⚙️ C# (.NET)</span></label></div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+ <!-- EXPERIENCE -->
+<section id="experience" class="experience-section">
+  <div class="experience-wrapper">
+
+    <div class="experience-header">
+      <span class="experience-tag">EXPERIENCE</span>
+      <h2>Professional <span>journey</span></h2>
+      <p>
+        Building practical skills through industry-recognized training programs.
+      </p>
+    </div>
+
+    <div class="experience-card">
+
+      <!-- Header -->
+      <div class="exp-top">
+        <div class="exp-left">
+          <div class="exp-logo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco">
+</div>
+
+          <div>
+            <h3>Network Engineer Trainee</h3>
+            <span class="exp-org">Cisco</span>
+          </div>
+        </div>
+
+        <span class="exp-badge">Certification Program</span>
+      </div>
+
+      <!-- Meta -->
+      <div class="exp-meta">
+        <span>📅 Jan 2024 – May 2024</span>
+        <span>📍 Dhaka, Bangladesh</span>
+      </div>
+
+      <!-- Description -->
+      <p class="exp-desc">
+        Completed comprehensive Cisco IT Essentials course, gaining hands-on
+        experience in IT infrastructure and networking.
+      </p>
+
+      <!-- Skills list -->
+      <div class="exp-skills">
+        <span>✔ Cisco IT Essentials certification</span>
+        <span>✔ Computer hardware & software proficiency</span>
+        <span>✔ OS installation & troubleshooting</span>
+        <span>✔ LAN configuration fundamentals</span>
+        <span>✔ IT security best practices</span>
+        <span>✔ System diagnostics & maintenance</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- EDUCATION -->
+<section id="education" class="education-section">
+  <div class="education-wrapper">
+
+    <!-- Header -->
+    <div class="education-header">
+      <span class="education-tag">EDUCATION</span>
+      <h2>Academic <span>background</span></h2>
+      <p>
+        Building a strong foundation in computer science and engineering.
+      </p>
+    </div>
+
+    <!-- Highlight Card -->
+    <div class="edu-highlight">
+      <div class="edu-highlight-icon">
+        🏆
+      </div>
+      <div>
+        <h4>Dean’s List Honors <span>★</span></h4>
+        <p>Recognized for academic excellence at AIUB</p>
+      </div>
+    </div>
+
+    <!-- Education List -->
+    <div class="education-list">
+
+      <!-- AIUB -->
+      <div class="education-card">
+        <div class="edu-left">
+          <div class="edu-logo aiub">
+  <img src="https://i.postimg.cc/qBjkPKrw/American-International-University-Bangladesh-Monogram.jpg" alt="AIUB Logo">
+</div>
+
+          <div>
+            <h3>American International University–Bangladesh</h3>
+            <span>BSc in Computer Science & Engineering</span>
+            <div class="edu-meta">📅 2024 – 2028</div>
+          </div>
+        </div>
+        <span class="edu-badge current">Current</span>
+      </div>
+
+      <!-- Milestone -->
+      <div class="education-card">
+        <div class="edu-left">
+          <div class="edu-logo mc">
+  <img src="https://i.postimg.cc/WzrxbxKm/Milestone-College-Logo.png" alt="Milestone College Logo">
+</div>
+
+          <div>
+            <h3>Milestone College</h3>
+            <span>Higher Secondary Certificate (Science)</span>
+            <div class="edu-meta">📅 2020 – 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- School -->
+      <div class="education-card">
+        <div class="edu-left">
+          <div class="edu-logo school">
+  <img src="https://i.postimg.cc/ZYcrXw0c/109044.png" alt="Shaheed Smrity High School Logo">
+</div>
+
+          <div>
+            <h3>Shaheed Smrity High School</h3>
+            <span>Secondary School Certificate</span>
+            <div class="edu-meta">📅 Completed</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="projects-wrapper">
+
+    <!-- Header -->
+    <div class="projects-header">
+      <span class="projects-tag">&lt;/&gt; PROJECTS</span>
+      <h2>Featured <span>work</span></h2>
+      <p>
+        A showcase of my projects and creative explorations in software development.
+      </p>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="projects-grid">
+
+      <!-- Portfolio Project -->
+      <div class="project-card">
+        <span class="project-status live">● Live</span>
+
+        <div class="project-icon">
+          🌐
+        </div>
+
+        <h3>Portfolio Website</h3>
+        <p>
+          A modern, responsive personal portfolio built to showcase my journey
+          as a developer.
+        </p>
+
+        <div class="project-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="#" class="btn-secondary">Code</a>
+          <a href="#" class="btn-primary">Demo</a>
+        </div>
+      </div>
+
+      <!-- Java Project -->
+      <div class="project-card">
+        <span class="project-status upcoming">● Java</span>
+
+        <div class="project-icon">
+          ☕
+        </div>
+
+        <h3>Online Hospital Management System</h3>
+        <p>
+          A Java-based hospital management system for managing patients,
+          doctors, appointments, and records efficiently.
+        </p>
+
+        <div class="project-tags">
+          <span>Java</span>
+          <span>OOP</span>
+          <span>MySQL</span>
+        </div>
+
+        <div class="project-actions">
+          <a href="https://github.com/MahimHossain04/Online-Hospital-Management-System.git"
+             target="_blank" class="btn-primary">
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Future Project -->
+      <div class="project-card">
+        <span class="project-status planned">● Planned</span>
+
+        <div class="project-icon">
+          🚀
+        </div>
+
+        <h3>Future Project</h3>
+        <p>
+          More projects will be added as I continue exploring new technologies
+          and building meaningful applications.
+        </p>
+
+        <div class="project-tags">
+          <span>Coming Soon</span>
+        </div>
+
+        <div class="project-actions">
+          <span class="btn-disabled">To Be Announced</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+
+  <div class="contact-header">
+    <span>CONTACT</span>
+    <h2>Let’s <span>connect</span></h2>
+    <p>
+      Open to opportunities, collaborations, or just a friendly chat about technology.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- LEFT -->
+    <div class="contact-info">
+
+     <div class="info-card">
+  <div class="info-icon">
+    <svg viewBox="0 0 24 24" fill="none">
+      <rect x="3" y="5" width="18" height="14" rx="2"
+        stroke="currentColor" stroke-width="1.6"/>
+      <path d="M3 7L12 13L21 7"
+        stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+  </div>
+
+  <div class="info-text">
+    <span>Email</span>
+    <p>mahimhossain11.04@gmail.com</p>
+  </div>
+</div>
+
+
+     <div class="info-card">
+  <div class="info-icon">
+    <!-- Modern Phone Icon -->
+    <svg viewBox="0 0 24 24" fill="none">
+      <path
+        d="M4.5 5.5C4.5 4.67 5.17 4 6 4H8.2C8.64 4 9.03 4.28 9.18 4.7L10.5 8.2C10.65 8.6 10.54 9.06 10.22 9.32L8.7 10.6C9.9 13.1 11.9 15.1 14.4 16.3L15.7 14.8C15.94 14.46 16.4 14.35 16.8 14.5L20.3 15.8C20.72 15.97 21 16.36 21 16.8V19C21 19.83 20.33 20.5 19.5 20.5C11.5 20.5 4.5 13.5 4.5 5.5Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  <div class="info-text">
+    <span>Phone</span>
+    <p>+880 1405284138</p>
+  </div>
+</div>
+
+
+      <div class="info-card">
+  <div class="info-icon">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 21C16 17 19 14 19 10A7 7 0 0 0 5 10C5 14 8 17 12 21Z"
+        stroke="currentColor" stroke-width="1.6"/>
+      <circle cx="12" cy="10" r="2.5"
+        stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+  </div>
+
+  <div class="info-text">
+    <span>Location</span>
+    <p>Dhaka, Bangladesh</p>
+  </div>
+</div>
+
+
+      <div class="socials">
+        <span>Find me online</span>
+        <div class="social-icons">
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/mahim-hossain1104/" target="_blank" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.27 2.3-2.6 4.73-2.6C22.4 7.6 24 10.4 24 14.4V24h-5v-8.4c0-2-.03-4.6-2.8-4.6-2.8 0-3.23 2.2-3.23 4.4V24H8z"/>
+    </svg>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/MahimHossain04" target="_blank" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .5C5.7.5.5 5.8.5 12.3c0 5.2 3.4 9.6 8.2 11.1.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.8-1.5 8.2-5.9 8.2-11.1C23.5 5.8 18.3.5 12 .5z"/>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/mahim4.11" target="_blank" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.8H16l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/mahim_4.11?igsh=ODcybHZ5dTJub21t&utm_source=qr" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A5.5 5.5 0 1 0 17.5 13 5.5 5.5 0 0 0 12 7.5zm0 9A3.5 3.5 0 1 1 15.5 13 3.5 3.5 0 0 1 12 16.5zm4.8-9.9a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/>
+    </svg>
+  </a>
+
+</div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <form class="contact-form"
+      action="https://formspree.io/f/xpqwjadn"
+      method="POST">
+
+  <label>Name</label>
+  <input type="text" name="name" placeholder="Your name" required>
+
+  <label>Email</label>
+  <input type="email" name="email" placeholder="your@email.com" required>
+
+  <label>Message</label>
+  <textarea name="message"
+    placeholder="Tell me about your project or just say hi..."
+    required></textarea>
+
+  <button type="submit" class="send-btn">
+    ✈ Send Message
+  </button>
+</form>
+
+
+  </div>
+</section>
+
+</body>
+</html>
