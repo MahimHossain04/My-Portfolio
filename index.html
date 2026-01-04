@@ -1366,6 +1366,147 @@ button:active,
   }
 }
 
+/* ===== Maintenance Banner ===== */
+.maintenance-banner {
+  position: fixed;
+  top: 90px; /* header নিচে */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 900px;
+  z-index: 999;
+}
+
+.banner-content {
+  background: linear-gradient(135deg, #1e293b, #020617);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.banner-text h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #a855f7;
+}
+
+.banner-text p {
+  font-size: 14px;
+  color: #cbd5f5;
+  line-height: 1.4;
+}
+
+.banner-close {
+  background: rgba(168,85,247,0.15);
+  border: none;
+  color: #a855f7;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-close:hover {
+  background: rgba(168,85,247,0.35);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .banner-close {
+    align-self: flex-end;
+  }
+}
+
+/* ===== Maintenance Modal (Center) ===== */
+.maintenance-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maintenance-modal {
+  background: linear-gradient(145deg, #020617, #1e293b);
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 20px;
+  padding: 32px 28px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  position: relative;
+  animation: scaleIn 0.4s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.maintenance-modal h2 {
+  font-size: 22px;
+  color: #a855f7;
+  margin-bottom: 12px;
+}
+
+.maintenance-modal p {
+  font-size: 15px;
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.modal-btn {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(168,85,247,0.15);
+  border: none;
+  color: #a855f7;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
   </style>
 </head>
@@ -1377,6 +1518,26 @@ button:active,
 </script>
 
 <body>
+
+ <!-- Maintenance Modal -->
+<div id="maintenanceModal" class="maintenance-overlay">
+  <div class="maintenance-modal">
+
+    <button class="modal-close" onclick="closeModal()">✕</button>
+
+    <h2>🚧 Website Under Development</h2>
+    <p>
+      This portfolio is currently under active development.
+      Some sections may be incomplete or subject to change.
+      You are viewing a demo version of the website.
+    </p>
+
+    <button class="modal-btn" onclick="closeModal()">Continue to Website</button>
+
+  </div>
+</div>
+
+
 
   <!-- HEADER -->
   <header>
@@ -2101,6 +2262,16 @@ button:active,
 <footer class="site-footer">
   <p>© 2026 Mahim Hossain. All rights reserved.</p>
 </footer>
+<script>
+  function closeBanner() {
+    document.getElementById("maintenanceBanner").style.display = "none";
+  }
+</script>
+<script>
+  function closeModal() {
+    document.getElementById("maintenanceModal").style.display = "none";
+  }
+</script>
 
 
 </body>
