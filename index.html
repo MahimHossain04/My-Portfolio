@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mahim Hossain | Portfolio</title>
-   <link rel="icon" type="image/png" href="icon1.png">
+   <link rel="icon" type="image/png" href="icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
@@ -153,6 +153,7 @@ button:active,
       grid-template-columns: 1fr 1fr;
       align-items: center;
       gap: 60px;
+      
     }
 
     .profile-wrapper {
@@ -384,6 +385,7 @@ button:active,
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  
 }
 
 .skills-card {
@@ -578,6 +580,13 @@ button:active,
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
+
+/* 🔥 REAL FIX: gap between skill rows */
+.skills-wrapper > .skills-cards + .skills-cards {
+  margin-top: 60px;
+}
+
+
 
 .exp-skills span {
   background: rgba(15,23,42,0.6);
@@ -1508,6 +1517,35 @@ button:active,
   cursor: pointer;
 }
 
+/* ===== Certificate Button ===== */
+.cert-btn {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cert-btn:hover {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: #fff;
+}
+
+/* ===== Planned Card ===== */
+.planned-card {
+  opacity: 0.6;
+  position: relative;
+}
+
+.planned-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(148,163,184,0.15);
+  color: #94a3b8;
+  letter-spacing: 1px;
+}
+
   </style>
 </head>
 <script>
@@ -1579,7 +1617,7 @@ button:active,
       </p>
       <div class="buttons">
         <a href="#projects" class="btn-primary">View Projects →</a>
-        <a href="resume.pdf" download class="btn-secondary">
+        <a href="Resume/resume.pdf" download class="btn-secondary">
   Download Resume
 </a>
 
@@ -1637,11 +1675,13 @@ button:active,
           <h4>Clean Coder</h4>
           <p>Writing efficient, maintainable code.</p>
         </div>
-        <div class="card">
-          <div class="card-icon">🧠</div>
-          <h4>Problem Solver</h4>
-          <p>Tackling complex challenges.</p>
-        </div>
+       <div class="card planned-card">
+  <div class="card-icon">🧠</div>
+  <h4>Problem Solver</h4>
+  <p>Tackling complex challenges.</p>
+  <span class="planned-badge">Planned</span>
+</div>
+
         <div class="card">
           <div class="card-icon">🎯</div>
           <h4>Goal Driven</h4>
@@ -1758,132 +1798,117 @@ button:active,
       </div>
 
       <!-- ================= IT & NETWORKING ================= -->
-      <div class="skills-card">
-        <div class="card-title">
-          <div class="icon-circle">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="6" r="2.5"
-                stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="6" cy="18" r="2.5"
-                stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="18" cy="18" r="2.5"
-                stroke="currentColor" stroke-width="1.8"/>
-              <path d="M12 8.5V13M12 13L6 15.5M12 13L18 15.5"
-                stroke="currentColor" stroke-width="1.8"/>
-            </svg>
-          </div>
-          <div>
-            <h3>IT & Networking</h3>
-            <span>System & security fundamentals</span>
-          </div>
-        </div>
+     <!-- ================= IT & NETWORKING ================= -->
+<div class="skills-card">
+  <div class="card-title">
+    <div class="icon-circle">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="6" r="2.5"
+          stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="6" cy="18" r="2.5"
+          stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="18" cy="18" r="2.5"
+          stroke="currentColor" stroke-width="1.8"/>
+        <path d="M12 8.5V13M12 13L6 15.5M12 13L18 15.5"
+          stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+    </div>
+    <div>
+      <h3>IT & Networking</h3>
+      <span>System & security fundamentals</span>
+    </div>
+  </div>
 
-        <div class="skill">
-          <label>
-            <span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <rect x="3" y="4" width="18" height="12" rx="2"
-                  stroke="currentColor" stroke-width="1.6"/>
-                <path d="M8 20H16" stroke="currentColor" stroke-width="1.6"/>
-              </svg>
-              Computer Hardware & Software
-            </span>
-            <span>50%</span>
-          </label>
-          <div class="progress"><div style="width:50%"></div></div>
-        </div>
+  <div class="skill" data-percent="30">
+    <label>
+      <span>🖥 Computer Hardware & Software</span>
+      <span>30%</span>
+    </label>
+    <div class="progress"><div></div></div>
+  </div>
 
-        <div class="skill">
-          <label>
-            <span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M3 4H21V16H3V4Z"
-                  stroke="currentColor" stroke-width="1.6"/>
-                <path d="M12 7V13" stroke="currentColor" stroke-width="1.6"/>
-              </svg>
-              OS Installation & Troubleshooting
-            </span>
-            <span>75%</span>
-          </label>
-          <div class="progress"><div style="width:75%"></div></div>
-        </div>
+  <div class="skill" data-percent="35">
+    <label>
+      <span>🛠 OS Installation & Troubleshooting</span>
+      <span>35%</span>
+    </label>
+    <div class="progress"><div></div></div>
+  </div>
 
-        <div class="skill">
-          <label>
-            <span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="5" r="2.5"
-                  stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="5" cy="18" r="2.5"
-                  stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="19" cy="18" r="2.5"
-                  stroke="currentColor" stroke-width="1.6"/>
-                <path d="M12 7.5V13M12 13L5 15.5M12 13L19 15.5"
-                  stroke="currentColor" stroke-width="1.6"/>
-              </svg>
-              Networking Fundamentals
-            </span>
-            <span>70%</span>
-          </label>
-          <div class="progress"><div style="width:70%"></div></div>
-        </div>
+  <div class="skill" data-percent="15">
+    <label>
+      <span>🌐 Networking Fundamentals</span>
+      <span>15%</span>
+    </label>
+    <div class="progress"><div></div></div>
+  </div>
 
-        <div class="skill">
-          <label>
-            <span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M12 3L20 6V12C20 16 16 19 12 21C8 19 4 16 4 12V6L12 3Z"
-                  stroke="currentColor" stroke-width="1.6"/>
-              </svg>
-              IT Security Basics
-            </span>
-            <span>65%</span>
-          </label>
-          <div class="progress"><div style="width:65%"></div></div>
-        </div>
+  <div class="skill" data-percent="20">
+    <label>
+      <span>🛡 IT Security Basics</span>
+      <span>20%</span>
+    </label>
+    <div class="progress"><div></div></div>
+  </div>
 
-        <div class="skill">
-          <label>
-            <span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path d="M4 12H8L10 6L14 18L16 12H20"
-                  stroke="currentColor" stroke-width="1.6"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              System Diagnostics
-            </span>
-            <span>75%</span>
-          </label>
-          <div class="progress"><div style="width:75%"></div></div>
-        </div>
+  <div class="skill" data-percent="45">
+    <label>
+      <span>📊 System Diagnostics</span>
+      <span>45%</span>
+    </label>
+    <div class="progress"><div></div></div>
+  </div>
+</div>
+
+
+      
       </div>
 
       <!-- ================= PROGRAMMING LANGUAGES ================= -->
-      <div class="skills-card">
-        <div class="card-title">
-          <div class="icon-circle">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path d="M8 17L3 12L8 7M16 7L21 12L16 17"
-                stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Programming Languages</h3>
-            <span>Core development skills</span>
-          </div>
-        </div>
-
-        <div class="skill"><label><span>💠 C++</span></label></div>
-        <div class="skill"><label><span>🌐 HTML</span></label></div>
-        <div class="skill"><label><span>🎨 CSS</span></label></div>
-        <div class="skill"><label><span>☕ Java</span></label></div>
-        <div class="skill"><label><span>⚙️ C# (.NET)</span></label></div>
-
+      <!-- ================= PROGRAMMING LANGUAGES ================= -->
+<div class="skills-cards">
+  <div class="skills-card">
+    <div class="card-title">
+      <div class="icon-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M8 17L3 12L8 7M16 7L21 12L16 17"
+            stroke="currentColor" stroke-width="1.8"
+            stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
+      <div>
+        <h3>Programming Languages</h3>
+        <span>Core development skills</span>
+      </div>
+    </div>
 
+    <div class="skill" data-percent="40">
+      <label><span>💠 C++</span><span>40%</span></label>
+      <div class="progress"><div></div></div>
+    </div>
+
+    <div class="skill" data-percent="45">
+      <label><span>🌐 HTML</span><span>45%</span></label>
+      <div class="progress"><div></div></div>
+    </div>
+
+    <div class="skill" data-percent="40">
+      <label><span>🎨 CSS</span><span>40%</span></label>
+      <div class="progress"><div></div></div>
+    </div>
+
+    <div class="skill" data-percent="30">
+      <label><span>☕ Java</span><span>30%</span></label>
+      <div class="progress"><div></div></div>
+    </div>
+
+    <div class="skill" data-percent="35">
+      <label><span>⚙️ C# (.NET)</span><span>35%</span></label>
+      <div class="progress"><div></div></div>
     </div>
   </div>
+</div>
+
 </section>
  <!-- EXPERIENCE -->
 <section id="experience" class="experience-section">
@@ -1912,7 +1937,14 @@ button:active,
           </div>
         </div>
 
-        <span class="exp-badge">Certification Program</span>
+        <a
+  href="certificates/cisco-it-essentials.pdf.pdf"
+  target="_blank"
+  class="exp-badge cert-btn"
+>
+  Certification Program
+</a>
+
       </div>
 
       <!-- Meta -->
@@ -2273,6 +2305,12 @@ button:active,
   }
 </script>
 
+<script>
+  document.querySelectorAll('.skill').forEach(skill => {
+    const percent = skill.dataset.percent;
+    skill.querySelector('.progress div').style.width = percent + '%';
+  });
+</script>
 
 </body>
 </html>
